@@ -1,0 +1,3 @@
+[submodule "OfflineKaraokeClient"]
+	path = OfflineKaraokeClient
+	url = https://github.com/vitrukroman/OfflineKaraokeClient
