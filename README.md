@@ -1,13 +1,10 @@
 Clone repository
 ```
-git clone --recurse-submodules
+git clone --recursive &&
+git submodule sync --recursive &&
+git submodule update --init --recursive &&
+git submodule foreach -q --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 ```
-
-Update submodule
-```
-git submodule update --remote
-```
-
 
 Push to this repo and submodules
 ```
