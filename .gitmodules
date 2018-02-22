@@ -6,3 +6,7 @@
 	path = OfflineKaraokeAPI
 	url = git@github.com:vitrukroman/OfflineKaraokeAPI.git
 	branch = master
+[submodule "OfflineKaraokeRenderer"]
+	path = OfflineKaraokeRenderer
+	url = git@github.com:vitrukroman/OfflineKaraokeRenderer.git
+	branch = master
