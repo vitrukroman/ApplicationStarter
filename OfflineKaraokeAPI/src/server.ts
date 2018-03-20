@@ -1,39 +1,16 @@
+import dotenv from "dotenv";
 import express from "express";
-import bodyParser from "body-parser";
-import { graphqlExpress, graphiqlExpress } from "apollo-server-express";
-import { makeExecutableSchema } from "graphql-tools";
-const books = [
-  {
-    title: "Harry Potter and the Sorcerer's stone",
-    author: 'J.K. Rowling',
-  },
-  {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
-  },
-];
+import createConfig from "../config/createConfig";
+import middlewares from "./middlewares/middlewares";
+import routes from "./routes/routes";
+import services from "./services/services";
 
-
-const typeDefs = `
-  type Query { books: [Book] }
-  type Book { title: String, author: String }
-`;
-
-const resolvers = {
-  Query: { books: () => books }
-}
-
-const schema = makeExecutableSchema({
-  typeDefs,
-  resolvers
-});
-
+dotenv.config();
 const app = express();
+const config = createConfig(process.env as any);
 
+services(config);
+middlewares(app, config);
+routes(app);
 
-app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
-app.use("/graphiql", graphiqlExpress({ endpointURL: "/graphql" }));
-
-app.listen(3000, () => {
-  console.log("Listening")
-});
+app.listen(config.port);
