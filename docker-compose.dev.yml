@@ -1,0 +1,22 @@
+version: '3'
+services:
+  api:
+    build:
+      context: ./OfflineKaraokeAPI
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - "./OfflineKaraokeAPI:/app"
+    env_file:
+      - ./OfflineKaraokeAPI/.env
+  renderer:
+    build:
+      context:  ./OfflineKaraokeRenderer
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./OfflineKaraokeRenderer:/app"
+    env_file:
+      - ./OfflineKaraokeRenderer/.env
