@@ -17,6 +17,7 @@ Before start
 ```
 cd NodeAPI && npm i && cd ..
 ```
+```
 cd IsomorphicReactApp && npm i && cd ..
 ```
 
