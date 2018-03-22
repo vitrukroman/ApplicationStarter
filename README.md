@@ -11,3 +11,16 @@ Push to this repo and submodules
 ```
 git push --recurse-submodules=on-demand
 ```
+
+
+Before start
+```
+cd NodeAPI && npm i && cd ..
+```
+cd IsomorphicReactApp && npm i && cd ..
+```
+
+Start App for development
+```
+docker-compose -f docker-compose.dev.yml up --build
+```
