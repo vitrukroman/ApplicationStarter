@@ -1,6 +1,6 @@
 [submodule "NodeAPI"]
 	path = NodeAPI
-	url = git@github.com:vitrukroman/OfflineKaraokeAPI.git
+	url = git@github.com:vitrukroman/NodeAPI.git
 	branch = master
 [submodule "IsomorphicReactApp"]
 	path = IsomorphicReactApp
