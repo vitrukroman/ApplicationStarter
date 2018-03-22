@@ -4,8 +4,6 @@ services:
     build:
       context: ./NodeAPI
       dockerfile: ./Dockerfile.dev
-    ports:
-      - "3001:3001"
     volumes:
       - "./NodeAPI:/app"
     env_file:
