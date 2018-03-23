@@ -1,0 +1,17 @@
+version: '3'
+services:
+  api:
+    build: ./NodeAPI
+    env_file:
+      - ./NodeAPI/.env
+    depends_on:
+      - redis
+  renderer:
+    build:
+      context:  ./IsomorphicReactApp
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./IsomorphicReactApp/.env
+  redis:
+    image: redis:latest
