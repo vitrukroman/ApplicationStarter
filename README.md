@@ -1,4 +1,4 @@
-Clone repository
+#Clone repository
 ```
 git clone --recursive git@github.com:vitrukroman/ApplicationStarter.git &&
 cd ApplicationStarter &&
@@ -7,21 +7,23 @@ git submodule update --init --recursive &&
 git submodule foreach -q --recursive 'git checkout $(git config -f $toplevel/.gitmodules submodule.$name.branch || echo master)'
 ```
 
-Push to this repo and submodules
+#Push to this repo and submodules
 ```
 git push --recurse-submodules=on-demand
 ```
 
 
-Before start
+#Before start
 ```
 cd NodeAPI && npm i && cd ..
 ```
 ```
-cd IsomorphicReactApp && npm i && cd ..
+#cd IsomorphicReactApp && npm i && cd ..
 ```
 
-Start App for development
+Create .env files for each project based on .env.example and fulfil ENV variables with real values
+
+# Start App for development
 ```
 docker-compose -f docker-compose.dev.yml up --build
 ```
