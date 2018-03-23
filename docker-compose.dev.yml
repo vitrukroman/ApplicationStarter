@@ -8,6 +8,8 @@ services:
       - "./NodeAPI:/app"
     env_file:
       - ./NodeAPI/.env
+    depends_on:
+      - redis
   renderer:
     build:
       context:  ./IsomorphicReactApp
@@ -18,3 +20,5 @@ services:
       - "./IsomorphicReactApp:/app"
     env_file:
       - ./IsomorphicReactApp/.env
+  redis:
+    image: redis:latest
