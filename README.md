@@ -30,5 +30,5 @@ docker-compose -f docker-compose.dev.yml up
 
 # Start App for production
 ```
-docker-compose up
+docker-compose up --build
 ```
