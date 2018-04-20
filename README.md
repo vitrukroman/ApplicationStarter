@@ -3,7 +3,9 @@
 git clone git@github.com:vitrukroman/ApplicationStarter.git &&
 cd ApplicationStarter &&
 git clone git@github.com:vitrukroman/IsomorphicReactApp.git
-git clone git@github.com:vitrukroman/NodeAPI.git
+git clone git@github.com:vitrukroman/NodeAPI.git &&
+cp NodeAPI/.env.example NodeAPI/.env &&
+cp IsomorphicReactApp/.env.example IsomorphicReactApp/.env
 ```
 
 # Before start
