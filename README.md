@@ -10,7 +10,7 @@ cp IsomorphicReactApp/.env.example IsomorphicReactApp/.env
 
 # Before start
 
-1 Create .env files for each project based on .env.example and fulfil ENV variables with real values
+1 Fullfill ENV variables in **`.env`** files with real values
 
 2 Generate TLS certificates and put them into **`private`** folder of **IsomorphicReactApp** project
 ```
