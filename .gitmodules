@@ -1,8 +1,0 @@
-[submodule "NodeAPI"]
-	path = NodeAPI
-	url = git@github.com:vitrukroman/NodeAPI.git
-	branch = master
-[submodule "IsomorphicReactApp"]
-	path = IsomorphicReactApp
-	url = git@github.com:vitrukroman/IsomorphicReactApp.git
-	branch = master
