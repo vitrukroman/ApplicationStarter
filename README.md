@@ -1,3 +1,11 @@
+# Clone repository
+```
+git clone git@github.com:vitrukroman/ApplicationStarter.git &&
+cd ApplicationStarter &&
+git clone git@github.com:vitrukroman/IsomorphicReactApp.git
+git clone git@github.com:vitrukroman/NodeAPI.git
+```
+
 # Before start
 
 1 Create .env files for each project based on .env.example and fulfil ENV variables with real values
