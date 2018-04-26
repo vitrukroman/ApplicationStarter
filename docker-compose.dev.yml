@@ -10,6 +10,8 @@ services:
       - ./NodeAPI/.env
     depends_on:
       - redis
+    ports:
+      - "3001:3001"
   renderer:
     build:
       context:  ./IsomorphicReactApp
